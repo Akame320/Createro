@@ -1,0 +1,43 @@
+//Формы
+mixin input-tel(object)
+    input.input-text(type='text' name='tel' placeholder = object.placeholder ? object.placeholder: '+7 (___) ___-__-__')
+    p.input-text-p
+        span.no *заполните поле
+        span.yes Успешно!
+
+mixin input-name(object)
+    input.input-text(type='text' name='name' placeholder = object.placeholder ? object.placeholder: 'Ваше имя')
+    p.input-text-p
+        span.no *заполните поле
+        span.yes Успешно!
+
+mixin input-email(object)
+    input.input-text(type='text' name='email' placeholder = object.placeholder ? object.placeholder: 'E-mail')
+    p.input-text-p
+        span.no *заполните поле
+        span.yes Успешно!
+
+mixin input-submit(object)
+    button.input-submit.btn.btn-default.ajax-submit(type='submit' class=object.style)
+        span Записаться на консультацию
+
+
+//Графика
+mixin setImg(object)
+    picture
+        source(srcset=object.webp media="(min-width: 780px)"  type='image/webp')
+        source(srcset=object.mWebp media="(min-width: 0) and (max-width: 780px)" type='image/webp')
+        img(src=object.img width='100' height='100' srcset=mImg + ' 780w' alt='По умолчанию' sizes="(min-width: 780px) 780px, (max-width: 780px) 790px")
+
+mixin setSvg(object)
+    svg.icon
+        use(xlink:href='images/skipped-optim.svg#' + object.name)
+
+//Текстовка
+mixin sectionTitle(object)
+    h2.section-title !{object.data}
+
+mixin sectionSubTitle(object)
+    span.section-subtitle !{object.data}
+
+//Аккордеон

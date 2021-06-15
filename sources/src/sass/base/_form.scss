@@ -1,0 +1,41 @@
+.input{
+
+  &-text{
+    padding: 2.2rem;
+    font-size: 1.8rem;
+
+    background-color: #fff;
+    backdrop-filter: blur(13px);
+    border-radius: 5px;
+
+    border: 2px  transparent solid;
+
+    color: black;
+    font-weight: 400;
+
+    transition: all 0.1s linear;
+
+    opacity: 0.8;
+
+    &:hover{
+      border-color: #b7cafc;
+    }
+
+    &:active,
+    &:focus{
+      border-color: $color-main;
+    }
+
+    &.no-valid{
+      border-color: #ff5a5a;
+    }
+
+    &.yes-valid{
+      border-color: greenyellow;
+    }
+  }
+
+  &-submit{
+
+  }
+}

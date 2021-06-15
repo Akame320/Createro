@@ -1,0 +1,42 @@
+.footer{
+
+  background: url("../images/content/footer/bg-pc.jpg") center no-repeat;
+  background-size: cover;
+
+
+  @media screen and (max-width: 1030px) {
+    background-image: url("../images/content/footer/bg-ipadPro.jpg");
+  }
+
+  @media screen and (max-width: 900px) {
+    background-image: url("../images/content/footer/bg-ipadMini.jpg");
+  }
+
+  @media screen and (max-width: 760px) {
+    background-image: url("../images/content/footer/bg-iphone.jpg");
+  }
+
+  &__inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top: 2px solid #DEDEDE;
+    padding: 6.5rem 0;
+
+
+    @media screen and (max-width: $mobile-screen) {
+      padding: 2.5rem 0;
+    }
+
+    .icon{
+      width: 25rem;
+      height: 8.2rem;
+      
+      @media screen and (max-width: $mobile-screen) {
+        width: 19rem;
+        height: 8.2rem;
+      }
+    }
+  }
+}

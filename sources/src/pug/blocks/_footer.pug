@@ -1,0 +1,34 @@
+.popup-form.popup(id='popup-form')
+	.popup-form__wrapper
+		.popup-form__inner
+			.popup-form__close.popup-close
+				+setSvg({name: 'close'})
+			include ../sections/form
+.popup-load.popup-error.popup(id='popup-error')
+	.popup-load__inner
+		+setSvg({name: 'error-popup'})
+		h5 Произошла ошибка
+		p  Пожалуйста, <br> попробуйте еще раз позже.
+		.popup-load__btn.popup-close
+			button.btn.btn-default
+				span На главную
+.popup-load.popup-yes.popup(id='popup-yes')
+	.popup-load__inner
+		.icon
+			+setImg({
+				webp: 'images/yes-form.webp',
+				mWebp: 'images/yes-form.webp',
+				img: 'images/yes-form.jpg',
+				mImg: 'images/yes-form.jpg'
+			})
+		h5 Спасибо!
+		p  Мы записали Вас <br> на бесплатную консультацию.
+		p.small Наш менеджер свяжется с Вами в ближайшее время.
+		.popup-load__btn.popup-close
+			button.btn.btn-default
+				span На главную
+footer.footer
+	.container
+		.footer__inner
+			a(href='index.html').footer__logo
+				+setSvg({name: "logo"})

@@ -1,0 +1,22 @@
+form.form-section__form.form-submit
+    .form-section__form-inner
+        .form-section__form-title
+            h3 Оставьте заявку на консультацию
+            p Разработаем стратегию продвижения, <br> сохраним показатели <br> и поможем достигнуть целей
+        .form-section__form-data
+            <input type="hidden" name="info" value="Чек-лист подробного аудита">
+            <input type="hidden" name="utm_source" value="">
+            <input type="hidden" name="utm_medium" value="">
+            <input type="hidden" name="utm_campaign" value="">
+            <input type="hidden" name="utm_content" value="">
+            <input type="hidden" name="utm_term" value="">
+            .form-section__form-row.input-row
+                +input-name({required: false})
+            .form-section__form-row.input-row
+                +input-tel({required: false})
+            .form-section__form-row.input-row
+                +input-email({required: false})
+            .form-section__form-row.input-row
+                +input-submit({required: false})
+            .form-section__form-row
+                p Нажимая на кнопку «Записаться на консультацию», вы даете согласие на <a href='policy.html'> обработку персональных данных</a>

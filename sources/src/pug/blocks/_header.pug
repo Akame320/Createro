@@ -1,0 +1,24 @@
+mixin socilaLink(object)
+	.social-links__item
+		a(href=object.link target='_blank').social-links__link
+			+setSvg({name: object.icon})
+header.header
+	.header__bg
+		//.circle-1
+		//.circle-3
+		//.circle-4
+	.container
+		.header__inner
+			a(href="index.html").logo
+				+setSvg({name: 'logo'})
+			.menu-block
+				//.circle-2
+				a(href='#' data-href='#portfolio').menu-btn.btn-white Кейсы
+				a(href='https://drive.google.com/file/d/1Z4c4TluzeWGeZAnENZ0ufluuRG3kUwjC/view?usp=sharing' target='_blank').menu-btn.btn-white Презентация
+			.social-links
+				+socilaLink({link: 'https://t.me/createro_agency', icon: 'tg'})
+				+socilaLink({link: 'https://www.facebook.com/createro.ru', icon: 'fb'})
+				+socilaLink({link: 'https://www.instagram.com/createro.ru/', icon: 'in'})
+		//header__inner
+	//container
+//header

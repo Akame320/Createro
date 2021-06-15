@@ -1,0 +1,106 @@
+.btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  vertical-align: top;
+
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  border: none;
+  border-radius: 100000px;
+
+  background-color: transparent;
+
+  height: auto;
+  max-width: none;
+  width: auto;
+
+  position: relative;
+
+  text-align: center;
+
+  font-size: 1.8rem;
+  font-weight: 700;
+
+  padding: 2.4rem 3.2rem;
+
+  transition: all 0.1s ease;
+
+  -webkit-background-clip: text;
+
+  @media screen and (max-width: $desctop-xs) {
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: $mobile-screen) {
+    font-size: 1.9rem;
+  }
+
+  &.btn-lg {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    min-height: 4.8rem;
+    font-weight: 600;
+  }
+
+  &.btn-wide {
+    width: 100%;
+  }
+}
+
+.btn-default {
+  background: $color-main;
+  color: $white;
+
+  position: relative;
+
+  span{
+    position: relative;
+    z-index: 100;
+
+    display: block;
+
+    transition: all 0.1s linear;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #fff;
+
+    opacity: 0;
+    visibility: hidden;
+
+    border-radius: 10000px;
+
+    transition: all 0.1s linear;
+  }
+
+  &:hover {
+
+    span{
+      background: linear-gradient(45deg, rgb(0, 184, 235), rgb(140, 118, 217), rgb(210, 67, 203));
+      -webkit-background-clip: text; /* Обрезаем фон по тексту */
+      -webkit-text-fill-color: transparent; /* Прозрачный текст */
+    }
+
+    &:after{
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+

@@ -1,0 +1,227 @@
+extends base/_layout
+block head
+    title Createro – креативное digital-агентство
+block page
+    .main-section(id='main-section')
+        .main-section__data-wrapper
+            .container
+                .main-section__inner
+                    .main-section__data
+                        h1.main-section__title Раскроем потенциал бизнеса
+                        p.main-section__subtitle Повысим узнаваемость вашего бренда и поможем достичь поставленных целей, используя современные подходы и экспертизу каждого члена команды
+                        .main-section__btn
+                            button.btn.btn-default.popup-open
+                                span Записаться на консультацию
+                        .main-section__offer
+                            .main-section__offer-img
+                                +setImg({
+                                    webp: 'images/content/main-section/0-pc.webp',
+                                    mWebp: 'images/content/main-section/0-mb.webp',
+                                    img: 'images/content/main-section/0-pc.png',
+                                    mImg: 'images/content/main-section/0-mb.png'
+                                })
+                            .main-section__offer-text И получить чек-лист «15 маркетинговых трендов, которые выведут вас в топ»
+                    .main-section__right
+                        .main-section__img
+                            picture
+                                source(srcset='images/0-iphone.webp' media="(min-width: 0) and (max-width: 760px)" type='image/webp')
+                                source(srcset='images/0-ipadMini.webp' media="(min-width: 760px) and (max-width: 900px)" type='image/webp')
+                                source(srcset='images/0-ipadPro.webp' media="(min-width: 900px) and (max-width: 1030px)" type='image/webp')
+                                source(srcset='images/main-bg-pc.webp' media="(min-width: 1030px)" type='image/webp')
+                                img(src='images/main-bg-pc.png' width='100' height='100' alt=' ' srcset='images/0-iphone.png 768w, images/0-ipadMini.png 900w , images/0-ipadPro.png 1030w' sizes="(max-width: 760px) 760px, (max-width: 900px) 900px, (max-width: 1030px) 1030px, (min-width: 1030px) 1040px")
+                        .main-section__reviews
+                            .main-section__reviews-header
+                                h6 О нас говорят
+                                +setSvg({name: 'person'})
+                            .main-section__reviews-items
+                                +mainSectionReviews({
+                                    name: 'Михаил Горский',
+                                    icon: '1',
+                                    text: 'Довольны результатом! Createro поняли требования бренда и воплотили в дизайне.'
+                                })
+                                +mainSectionReviews({
+                                    name: 'Ирина Полякова',
+                                    icon: '2',
+                                    text: 'Createro - надежный партнер. помогают нам решить не только сезонные задачи, но и достичь стратегических целей.'
+                                })
+                                +mainSectionReviews({
+                                    name: 'Николай Райхель',
+                                    icon: '3',
+                                    text: 'От сотрудничества остались только положительные эмоции.'
+                                })
+                                +mainSectionReviews({
+                                    name: 'Михаил Колосков',
+                                    icon: '4',
+                                    text: 'Агентство разработало нам более 100 креативных баннеров для размещения в DBM, Yandex и SM. Команда оперативно реагировала и предлагала классные идеи.'
+                                })
+                                +mainSectionReviews({
+                                    name: 'Валентин Колокол',
+                                    icon: '5',
+                                    text: 'Работаем с Createro второй год, делают свою работу на должном уровне.'
+                                })
+                                +mainSectionReviews({
+                                    name: 'Екатерина Лях',
+                                    icon: '6',
+                                    text: 'Это единственные ребята, от которых я не слышала: «Результат невозможно измерить».'
+                                })
+                                +mainSectionReviews({
+                                    name: 'Натела Тарасова',
+                                    icon: '7',
+                                    text: 'Заказывали сайт-визитку. Приятно, что ещё на этапе переговоров поняли, что мы хотим получить в итоге.'
+                                })
+
+    .who-section
+        //.who-section__bg
+            picture
+                source(srcset='images/content/who-section/bg-iphone.webp' media="(min-width: 0) and (max-width: 768px)" type='image/webp')
+                source(srcset='images/content/who-section/bg-ipadMini.webp' media="(min-width: 768px) and (max-width: 900px)" type='image/webp')
+                source(srcset='images/content/who-section/bg-ipadPro.webp' media="(min-width: 900px) and (max-width: 1030px)" type='image/webp')
+                source(srcset='images/content/who-section/bg-pc.webp' media="(min-width: 1030px)" type='image/webp')
+                img(src='images/content/who-section/bg-pc.jpg' srcset='images/content/who-section/bg-iphone.jpg 768w, images/content/who-section/bg-ipadMini.jpg 900w, images/content/who-section/bg-ipadPro.jpg' + ' 1030w')
+        .who-section__wrapper
+            .container
+                .who-section__inner
+                    +whoItem({number: "<span>01</span>", title: 'МЫ ДЕЛАЕМ ВАШ БРЕНД', text: 'Узнаваемым и Успешным'})
+                    +whoItem({
+                        number: "<span>02</span>",
+                        title: 'МЫ ДЕЛАЕМ КОММУНИКАЦИЮ',
+                        text: 'Эффективной с помощью ИИ'
+                    })
+                    +whoItem({number: "<span>03</span>", title: 'МЫ ДЕЛАЕМ РЕКЛАМУ', text: 'Запоминающейся'})
+    .service-section
+        .container
+            .service-section__inner
+                .service-section__title
+                    h2.mobile-remove Мы выделяем 5 ключевых направлений работы
+                    h2.mobile-active Что мы умеем?
+                .service-section__data
+                    +servicesCart({
+                        icon: '0',
+                        title: 'Creative Marketing',
+                        text: ' Креативные концепции <br> Создание рекламных кампаний <br> Разработка Key Visual'
+                    })
+                    +servicesCart({
+                        icon: '1',
+                        title: 'Branding',
+                        text: ' Фирменный стиль <br> Брендбук <br> Рекламные материалы '
+                    })
+                    +servicesCart({
+                        icon: '2',
+                        title: 'Web Solutions',
+                        text: ' Корпоративные сайты <br> Мобильные приложения <br> Интернет-магазины'
+                    })
+                    +servicesCart({
+                        icon: '3',
+                        title: 'Digital Marketing',
+                        text: ' Контент-стратегия <br> Поисковая оптимизация (SEO) <br> SMM-маркетинг '
+                    })
+                    +servicesCart({
+                        icon: '4',
+                        title: 'Design',
+                        text: ' Графический дизайн <br> Моушн-дизайн <br> Иллюстрации '
+                    })
+
+    section.portfolio-section(id='portfolio')
+        .container
+            .portfolio-section__inner
+                .portfolio-section__title
+                    h2 Кейсы
+                .portfolio-section__data
+                    .portfolio-section__arrow
+                        .portfolio-section__arrow-btn.arrow-prev
+                            +setSvg({name: 'arrow-up'})
+                        .portfolio-section__arrow-btn.arrow-next
+                            +setSvg({name: 'arrow-up'})
+                    .portfolio-section__slider
+                        +portfolioSlide({
+                            link: 'https://youtu.be/soJfiuTbgew',
+                            img: '0',
+                            title: 'Amway',
+                            text: 'Разработали узнаваемого персонажа, который значительно увеличил продажи продукта и выгодно выделил бренд среди конкурентов.'
+                        })
+                        +portfolioSlide({
+                            link: 'https://youtu.be/hnk9HDEC9aE',
+                            img: '1',
+                            title: 'ТРЦ Zеленопарк',
+                            text: 'Создание имиджевых рекламных кампаний и роликов о  ТРЦ Zеленопарк.'
+                        })
+                        +portfolioSlide({
+                            link: 'https://youtu.be/FhVyv0oU5LY',
+                            img: '2',
+                            title: 'DPD Russia',
+                            text: 'Создание tone of voice,  разработка контент-плана и конкурсных механик.'
+                        })
+                .portfolio-section__dots
+
+    section.form-section
+        .container
+            .form-section__inner
+                .form-section__title
+                    h2 Связь с нами
+                .form-section__data
+                    .form-section__img
+                        +setImg({
+                            webp: 'images/content/form-section/0-pc.webp',
+                            mWebp: 'images/content/form-section/0-mb.webp',
+                            img: 'images/content/form-section/0-pc.png',
+                            mImg: 'images/content/form-section/0-mb.png'
+                        })
+                        p <span>Чек-лист</span> «15 маркетинговых трендов, которые выведут вас в топ» <span>в подарок</span>
+                    include sections/form
+
+mixin portfolioSlide(object)
+    .portfolio-section__slide
+        a(href=object.link data-fancybox=object.link).portfolio-section__slide-inner
+            .portfolio-section__slide-img
+                +setSvg({name: 'play'})
+                +setImg({
+                    webp: 'images/content/portfolio-section/' + object.img + '.webp',
+                    mWebp: 'images/content/portfolio-section/' + object.img + '.webp',
+                    img: 'images/content/portfolio-section/' + object.img + '.jpg',
+                    mImg: 'images/content/portfolio-section/' + object.img + '.jpg',
+                })
+            .portfolio-section__slide-data
+                .portfolio-section__slide-title !{object.title}
+                .portfolio-section__slide-text !{object.text}
+mixin servicesCart(object)
+    .service-section__cart
+        .service-section__cart-wrapper
+            .service-section__cart-bg
+                +setImg({
+                    webp: 'images/content/services-section/0.webp',
+                    mWebp: 'images/content/services-section/0.webp',
+                    img: 'images/content/services-section/0.png',
+                    mImg: 'images/content/services-section/0.png'
+                })
+            .service-section__cart-inner
+                .service-section__cart-icon
+                    //+setSvg({name: object.icon})
+                    .icon
+                        +setImg({
+                            webp: 'images/content/icons/'+object.icon+'.webp',
+                            mWebp: 'images/content/icons/'+object.icon+'.webp',
+                            img: 'images/content/icons/'+object.icon+'.png',
+                            mImg: 'images/content/icons/'+object.icon+'.png'
+                        })
+                .service-section__cart-title !{object.title}
+                .service-section__cart-text !{object.text}
+mixin whoItem(object)
+    .who-section__item
+        .who-section__item-bg
+        .who-section__item-inner
+            .who-section__item-number !{object.number}
+            .who-section__item-data
+                .who-section__item-title !{object.title}
+                .who-section__item-text !{object.text}
+mixin mainSectionReviews(object)
+    .main-section__reviews-item
+        .main-section__reviews-img
+            +setImg({
+                webp: 'images/content/main-section/reviews/' + object.icon + '.webp',
+                img: 'images/content/main-section/reviews/' + object.icon + '.jpg',
+                mImg: 'images/content/main-section/reviews/' + object.icon + '.jpg',
+                mWebp: 'images/content/main-section/reviews/' + object.icon + '.jpg',
+            })
+        .main-section__reviews-data
+            .main-section__reviews-name !{object.name}
+            .main-section__reviews-text !{object.text}

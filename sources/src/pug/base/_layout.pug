@@ -1,0 +1,45 @@
+include _vars
+include _mixins
+include _myMixin
+doctype html
+html(lang="ru")
+    head
+        block head
+            title title
+        meta(charset="utf-8")
+        meta(name="keywords" content="createro, креатеро, креативное агенство, creative agency, digital agency, рекламное агентство, smm агентство, топ, сочи, красная поляна, казань, екатеринбург, спб, москва, брендинг, логотип, фирменный стиль, продающий сайт, лендинг, презентация, фирменный персонаж, маскот, реклама, рекламная кампания, продвижение в социальных сетях")
+        meta(name="description" content="Креативное агентство, специализирующееся на брендинге, создании рекламных образов и коммуникации в digital.")
+
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+        meta(name="format-detection" content="telephone=no")
+
+        link(rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png")
+        link(rel="manifest" href="/site.webmanifest")
+        link(rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5")
+        meta(name="msapplication-TileColor" content="#da532c")
+        meta(name="theme-color" content="#ffffff")
+
+        link(rel="stylesheet" href="css/main.min.css")
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;400;500&display=swap" rel="preloader")
+
+    body
+        block svg
+            include _svg
+        .layout
+            block header
+                include ../blocks/_header
+
+            block main
+                include ../blocks/_main
+
+            block footer
+                include ../blocks/_footer
+
+        block js
+            script(src="js/main.min.js")
+            <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq = function () {n.callMethod ?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init', '1215880565517398');fbq('track', 'PageView');</script><noscript><img height="1" width="1" style="display:none"src="https://www.facebook.com/tr?id=1215880565517398&ev=PageView&noscript=1"/></noscript>
+
